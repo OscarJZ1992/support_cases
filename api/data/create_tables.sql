@@ -27,7 +27,7 @@ CREATE TABLE logs (
 
 
 INSERT INTO users (userName) VALUES 
-('johndoe'), ('janedoe'), ('alice'), ('bob'), ('charlie'),
+('johndoe'), ('janedoe'), ('juan'), ('bob'), ('charlie'),
 ('david'), ('edward'), ('frank'), ('george'), ('harry'),
 ('irene'), ('james'), ('karen'), ('laura'), ('michael'),
 ('nancy'), ('oliver'), ('paul'), ('quincy'), ('rachel');
