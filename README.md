@@ -43,10 +43,10 @@ DB_PASSWORD
 DB_NAME
 ```
 **IMPORTANTE**
-El nombre que asignes a la variable `DB_NAME` debe ser el mismo nombre que debes indicar en la configuracion de conexión en el archivo **db_config.py**
+El nombre que asignes a la variable `DB_NAME` debe ser el mismo nombre que debes indicar en la configuracion de conexión en el archivo **db_config.py** en la propiedad **database**
 1. Ubicate en el root del proyecto
 2. Dirigete a `api/data/db_config.py`
-3. Modifica los campos de conexión a la base de datos correspondientes y que sean acordes con las definidas en el archivo `setup.sh` *(Paso 6)*
+3. Modifica los campos de conexión a la base de datos correspondientes y que sean acordes con las definidas en el archivo `setup.sh`
 
 ### 6. Crear e inicializar la base de datos
 Una vez completados los pasos anteriores, abre la consola en el directorio raíz del proyecto y ejecuta el siguiente comando para inicializar el proceso de creación de la base de datos:
