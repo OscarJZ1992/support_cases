@@ -59,3 +59,12 @@ En este paso **6**, si estás en windows es recomendable abrir la consola de `gi
 ```
 invoke run
 ```
+
+### 8. Referencias
+```
+FastApi: https://fastapi.tiangolo.com/tutorial/
+IA: https://chatgpt.com/share/53a93961-f150-4dbe-991b-76ebdc445e13
+SQL: https://fastapi.tiangolo.com/tutorial/sql-databases/#create-a-middleware
+Python: https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions
+psycop: https://www.psycopg.org/docs/connection.html
+```
