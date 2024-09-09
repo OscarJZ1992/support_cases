@@ -24,7 +24,7 @@ def createNewSupport(support: Support):
     
     else:
         cursor = connection.cursor()
-        cursor.execute("INSERT INTO support_cases (case_name, description, created_at, event_id, user_id) VALUES (%s, %s, %s, %s, %s) RETURNING id;", (support.case_name, support.description, support.created_at, support.event_id, support.user_id,))
+        cursor.execute("INSERT INTO support_cases (case_name, description, created_at, user_id) VALUES (%s, %s, %s, %s) RETURNING id;", (support.case_name, support.description, support.created_at, support.user_id,))
         new_id = cursor.fetchone()[0]
         connection.commit()
         cursor.close()
@@ -35,17 +35,23 @@ def createNewSupport(support: Support):
 def getAllSupportDb():
     connection = get_connection()
     cursor = connection.cursor()
-    cursor.execute("SELECT * FROM support_cases")
+    cursor.execute("""
+            SELECT s.*, u.username 
+            FROM support_cases s 
+            INNER JOIN users u ON s.user_id = u.id;
+        """)
     support = cursor.fetchall()
     cursor.close()
     connection.close()
+    print(support)
     support_list = [
         {
+            'id': item[0],
             'case_name': item[1],
-            'description': item[3],
-            'created_at': item[2].isoformat(),
-            'event_id': item[4],
-            'user_id': item[5]
+            'description': item[2],
+            'created_at': item[3].isoformat(),
+            'user_id': item[4],
+            'username': item[5]
         }
         for item in support
     ]
@@ -57,7 +63,21 @@ def deleteSupport(support_id: int):
     connection = get_connection()
     cursor = connection.cursor()
     cursor.execute("DELETE FROM support_cases WHERE id = %s;", (support_id,))
+    cursor.execute("SELECT * FROM support_cases")
+    support = cursor.fetchall()
     connection.commit()
     cursor.close()
     connection.close()
-    return None
+    support_list = [
+    {
+        'id': item[0],
+        'case_name': item[1],
+        'description': item[2],
+        'created_at': item[3].isoformat(),
+        'user_id': item[4]
+    }
+    for item in support
+    ]
+    json_result = json.dumps(support_list)
+    
+    return json_result

@@ -1,12 +1,5 @@
 #!/bin/bash
 
-REQUIREMENTS_FILE="requirements.txt"
-
-echo "Instalando dependencias de Python..."
-pip install -r $REQUIREMENTS_FILE
-
-
-#DB config
 DB_USER="postgres"
 DB_PASSWORD="1234"
 DB_NAME="support_process_cases"
