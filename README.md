@@ -49,10 +49,13 @@ Una vez completados los pasos anteriores, abre la consola en el directorio raíz
 setup.sh
 ```
 **NOTA**
-En este paso **5**, si estás en windows es recomendable abrir la consola de `git bash` ubicate en el root del proyecto y ejecutar el comando `./setup.sh`
+En este paso **6**, si estás en windows es recomendable abrir la consola de `git bash` ubicate en el root del proyecto y ejecutar el comando `./setup.sh`
 
 
 ### 7. Recomendaciones
 1. Una vez creada la base de datos, verifica en un ORM que se creó la base de datos y tenga información.
-2. Finalmente cuando hayas verificado que si creó la base de datos con las tablas e información, ubicate nuevamente desde tu terminal en el root del proyecto y ejecuta el siguiente comando:
-`invoke run` para levantar el ***API***.
+2. Finalmente cuando hayas verificado que creó la base de datos con las tablas e información, ubicate nuevamente desde tu terminal en el root del proyecto y ejecuta el siguiente comando:
+ para levantar el ***API***.
+```
+invoke run
+```
