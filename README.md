@@ -29,10 +29,7 @@ pip install -r requirements.txt
 ### 4. Instalar las dependencias adicionales
 Instala las siguientes dependencias de forma manual desde la consola en el root del proyecto
 ```
-pip install psycopg2
-pip install fastapi
-pip install invoke uvicorn
-pip install fastapi-cors
+pip install psycopg2 fastapi invoke uvicorn fastapi-cors
 ``` 
 
 ### 5. Modificar los datos en el archivo setup.sh
