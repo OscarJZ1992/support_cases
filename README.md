@@ -26,8 +26,8 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Instalar las dependencias manualmente (SOLO si no te funciona el paso 3)
-Instala las siguientes dependencias de forma manual
+### 4. Instalar las dependencias adicionales
+Instala las siguientes dependencias de forma manual desde la consola en el root del proyecto
 ```
 pip install psycopg2
 pip install fastapi
