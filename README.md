@@ -49,7 +49,7 @@ Una vez completados los pasos anteriores, abre la consola en el directorio raíz
 setup.sh
 ```
 **NOTA**
-En este paso **5**, si estás en windows es recomendable abrir la consola de `git bash` ubicate en el root del proyecto y ejecutar el comando `./setup.sh`
+En este paso **6**, si estás en windows es recomendable abrir la consola de `git bash` ubicate en el root del proyecto y ejecutar el comando `./setup.sh`
 
 
 ### 7. Recomendaciones
